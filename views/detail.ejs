@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+    <main>
+
+        
+        <h1><%= myData.name %> </h1>
+        <h2><%= myData.price %> </h2>
+        <img src="<%= myData.image_link %>" alt="image">
+
+
+        <button id="btn">update</button>
+        
+        <form action="/update/<%= myData.id %>" id="form">
+            <input type="text" name="name" value="<%= myData.name %>">
+            <input type="text" name="price" value="<%= myData.price %>">
+            <input type="text" name="image_link" value="<%= myData.image_link %>">
+            <input type="text" name="description" value="<%= myData.description %>">
+            <button>update data</button>
+        </form>
+
+        <form action="/delete/<%= myData.id %>">
+            <button>delete </button>
+        </form>
+    
+      
+    </main>
+   </main> 
+   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "Make-up-App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmad-arman/Make-up-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmad-arman/Make-up-App/issues"
+  },
+  "homepage": "https://github.com/ahmad-arman/Make-up-App#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "pg": "^8.6.0",
+    "superagent": "^6.1.0"
+  }
+}
