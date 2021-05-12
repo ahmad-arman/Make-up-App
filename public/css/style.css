@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+main {
+    width: 960px;
+    margin: auto;
+}
+body {
+    display: grid;
+    grid-template-rows: 470px 8fr 1fr;
+    background-color:pink;
+    width: 100%;
+    margin: auto;
+   
+    /* background-image:url(https://i.pinimg.com/564x/59/38/4c/59384cd78e8360eb7b96375e647bf997.jpg); */
+    /* background-image: url(https://static.toiimg.com/thumb/75160421.cms?width=680&height=512&imgsize=159143);
+    background-image: url(https://media.istockphoto.com/photos/makeup-cosmetics-set-picture-id586949418?s=612x612); */
+   
+    
+    
+}
+header {
+    background-image: url(https://imgk.timesnownews.com/story/makeup_products_and_tools_0.jpg?tr=w-600,h-450,fo-auto);
+    background-size: 100% 100%;
+   
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 100%;
+    width: 100%;
+     margin: auto;
+}
+nav {
+   
+    height: 270px;
+    line-height: 270px;
+}
+nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+a {
+    width: 100px;
+    height: 30px;
+    background-color: pink;
+    box-shadow: 0.2em 0.1em 0.2em brown;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    margin-top: 400px;
+    color: black;
+    border-top-left-radius: 10px;
+}
+main {
+  
+    margin-top: 50px;
+    margin: auto;
+}
+select {
+    width: 150px;
+    height: 30px;
+    background-color: floralwhite;
+    margin: 15px;
+   
+}
+input[type="text"] {
+    height: 30px;
+    background-color: #FFB6C1;
+    color: black;
+}
+button {
+    width: 150px;
+    height: 30px;
+    margin: 15px;
+   
+}
+footer {
+    line-height: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.home {
+   
+    text-align: center;
+}
+.contaner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+.items{
+    background-color: violet;
+    box-shadow: 0.2em 0.2em 0.2em 0.2em darkmagenta;
+    text-align: center;
+    transform-style: flat;
+    margin: 30px 0px;
+
+
+}
+input[type="number"] {
+    height: 30px;
+    /* border-bottom-left-radius: 5px; */
+    background-color: floralwhite;
+}
+h1 {
+    text-align: center;
+    /* margin-bottom: 5px; */
+    margin-top: 100px;
+}

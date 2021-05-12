@@ -5,16 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header><nav>
+        <a href="#">Home</a>
+        <a href="/product">All Product</a>
+        <a href="/myCard">my Card</a>
+    </nav></header>
     <main>
-        <form action="/getResult">
-            <input type="text" name="brand" placeholder="App brand name" >
-            <input type="text" name="greater" placeholder="greater price">
-            <input type="text" name="less"  placeholder="less price">
-            <button>Get</button>
+        <div class="home">
+            <div>
+                <select name="brand" placeholder="App brand name"  form="ahmad"> 
+           
+                    <option value="marcelle"> marcelle </option>
+                    <option value="orly"> orly </option>
+                    <option value="maybelline"> maybelline </option>
+                    <option value="revlon"> revlon </option>
+                    <option value="boosh"> boosh </option>
+                    <option value="dior"> dior </option>
+                    <option value="l'oreal"> l'oreal </option>
+                    <option value="sante"> sante </option>
+                    <option value="zorah"> zorah </option>
+                    <option value="benefit"> benefit </option>
+                </select>
 
-        </form>
+            </div>
+            <div>
+                <form action="/getResult" id="ahmad">
+                    <input type="number" name="less"  placeholder="less price">
+            
+                    <input type="number" name="greater" placeholder="greater price"> <br>
+                   
+                    <button>Get</button>
+        
+                </form>
+
+            </div>
+           
+            
+        </div>
+       
+       
+        
+        
     </main>
+    <footer>
+        update from Ahmad &copf; 2021
+    </footer>
 </body>
 </html>

@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL,
-     ssl: { rejectUnauthorized: false }
+    //  ssl: { rejectUnauthorized: false }
 });
 
 
@@ -24,6 +24,7 @@ const client = new pg.Client({ connectionString: process.env.DATABASE_URL,
 //Rout
 app.get('/',homeHandler);
 app.get('/getResult',resultHandler);
+app.get('/product',productHandler);
 app.get('/allProduct',allProductHandler);
 app.get('/save',saveHandler);
 app.get('/myCard',myCardHandler);
@@ -40,9 +41,10 @@ function homeHandler (req,res){
 
 }
 function resultHandler (req ,res){
+    let brand = req.query.brand;
     let greater=req.query.greater;
     let less =req.query.less;
-    let url = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline&price_greater_than=${greater}&price_less_than=${less}`;
+    let url = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&price_greater_than=${less}&price_less_than=${greater}`;
     superagent.get(url)
     .then(result=>{
         // res.send(result.body);
@@ -52,10 +54,14 @@ function resultHandler (req ,res){
         res.render('ProductByPrice',{myData:myData});
     })
 }
+function productHandler(req,res){
+    res.render('product');
+}
 
 function allProductHandler (req ,res){
-    
-    let url = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`;
+    let brand = req.query.brand;
+    console.log(brand);
+    let url = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}`;
     superagent.get(url)
     .then(result=>{
         // res.send(result.body);
@@ -119,7 +125,7 @@ function deleteHandler(req,res){
 function MakeUp (element){
     this.name=element.name;
     this.price=element.price;
-    this.image_link=element.image_link;
+    this.image_link=(element.image_link) ? element.image_link : `https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thermaxglobal.com%2Farticles%2Fchiller-for-a-packaging-manufacturer%2Fimage-not-found%2F&psig=AOvVaw2Rkn0VHfmZcakqdXdcnC6d&ust=1620386260010000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCTlbP3tPACFQAAAAAdAAAAABAD`;
     this.description=element.description;
 
 }

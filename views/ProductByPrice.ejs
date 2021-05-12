@@ -5,17 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-     <% myData.forEach(element=>{ %>
-        <h1><%= element.name %> </h1>
-        <h2><%= element.price %> </h2>
-        <img src="<%= element.image_link %>" alt="image">
-        
-        <p><%= element.description %> </p>
+    <header><nav>
+        <a href="/">Home</a>
+        <a href="/product">All Product</a>
+        <a href="/myCard">my Card</a>
+    </nav> <br>
+    <% if(myData.length == 0){ %>
+        <h1>we do not have product in this price </h1>
 
-     <%}) %>    
+  <%  } %> 
+</header>
+    <main>
+       
+         <div class="contaner">
+        
+        <% myData.forEach(element=>{ %>
+        <div class="items">
+            
+                <h1><%= element.name %> </h1>
+                <h2><%= element.price %> </h2>
+                <img src="<%= element.image_link %>" alt="image not found">
+                
+                <p><%= element.description %> </p>
+        
+             
+
+        </div>
+        <%}) %>   
+    </div>
+     
     </main>
+    <footer>
+        update from Ahmad &copf; 2021
+    </footer>
 </body>
 </html>

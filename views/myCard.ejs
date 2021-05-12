@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header><nav>
+        <a href="/">Home</a>
+        <a href="/product">All Product</a>
+        <a href="/myCard">my Card</a>
+    </nav>
+    <% if(myData.length == 0){ %>
+        <h1>we do not have any product </h1>
+
+  <%  } %> 
+</header>
     <main>
 
+        <div class="contaner">
+
+
         <% myData.forEach(element=>{ %>
+            <div class="items">
             <h1><%= element.name %> </h1>
             <h2><%= element.price %> </h2>
-            <img src="<%= element.image_link %>" alt="image">
+            <img src="<%= element.image_link %>" alt="image not found">
             
             <form action="/detail/<%= element.id %>">
                 <input type="hidden" name="name" value="<%= element.name %>">
@@ -21,8 +36,13 @@
                 <input type="hidden" name="description" value="<%= element.description %>">
                 <button>view detail</button>
             </form>
+        </div>
     
          <%}); %>   
+        </div>
     </main>
+    <footer>
+        update from Ahmad &copf; 2021
+    </footer>
 </body>
 </html>
